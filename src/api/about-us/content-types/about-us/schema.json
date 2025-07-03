@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About-us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "block2": {
+      "type": "component",
+      "component": "about-us.about-us-block-2",
+      "repeatable": false
+    },
+    "block3": {
+      "type": "component",
+      "component": "about-us.about-us-block-3",
+      "repeatable": false
+    },
+    "block4": {
+      "type": "component",
+      "component": "about-us.about-us-block-4",
+      "repeatable": false
+    },
+    "block5": {
+      "type": "component",
+      "component": "about-us.about-us-block-5",
+      "repeatable": false
+    },
+    "block1": {
+      "type": "component",
+      "component": "about-us.about-us-block-1",
+      "repeatable": false
+    }
+  }
+}

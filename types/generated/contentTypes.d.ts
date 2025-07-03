@@ -373,36 +373,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutAbout extends Struct.SingleTypeSchema {
-  collectionName: 'abouts';
+export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'about_uses';
   info: {
-    displayName: 'About';
-    pluralName: 'abouts';
-    singularName: 'about';
+    displayName: 'About-us';
+    pluralName: 'about-uses';
+    singularName: 'about-us';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    block1: Schema.Attribute.Component<'about-us.about-us-block-1', false>;
+    block2: Schema.Attribute.Component<'about-us.about-us-block-2', false>;
+    block3: Schema.Attribute.Component<'about-us.about-us-block-3', false>;
+    block4: Schema.Attribute.Component<'about-us.about-us-block-4', false>;
+    block5: Schema.Attribute.Component<'about-us.about-us-block-5', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    image1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    text: Schema.Attribute.RichText;
-    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.String;
   };
 }
 
-export interface ApiHomeHome extends Struct.CollectionTypeSchema {
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
     displayName: 'Home';
@@ -413,7 +416,8 @@ export interface ApiHomeHome extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    about: Schema.Attribute.Relation<'oneToOne', 'api::about.about'>;
+    about: Schema.Attribute.Component<'home.about', false>;
+    banner: Schema.Attribute.Component<'home.banner', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -936,7 +940,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::about.about': ApiAboutAbout;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::home.home': ApiHomeHome;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

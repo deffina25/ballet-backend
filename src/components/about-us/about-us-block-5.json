@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_about_us_about_us_block_5s",
+  "info": {
+    "displayName": "about-us-block-5"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

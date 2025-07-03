@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "homes",
   "info": {
     "singularName": "home",
@@ -11,10 +11,15 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "home.banner",
+      "repeatable": false
+    },
     "about": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::about.about"
+      "type": "component",
+      "component": "home.about",
+      "repeatable": false
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_about_us_about_us_block_1s",
+  "info": {
+    "displayName": "about-us-block-1"
+  },
+  "options": {},
+  "attributes": {
+    "name1": {
+      "type": "string"
+    },
+    "name2": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

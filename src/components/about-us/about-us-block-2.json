@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_us_about_us_block_2_s",
+  "info": {
+    "displayName": "about-us-block-2 "
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
